@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name = "threadSuite" parallel = "methods" thred-count = "2">
+    <!--
+    tests级别：不同的test tag可以在不同的线程下执行，相同的test tag只能在同一个线程下执行
+    classs级别：相同的class tag的用例在同一个线程中执行，不同的class tag的用例在不同的线程下执行
+    methods级别：所有用例都可以在不同的线程下执行
+    thred-count:代表了最大并发线程数
+    xml文件配置这种方式不能指定线程池，只有在方法上才能够指定线程池
+    -->
+    <test name = "demo1">
+        <classes>
+            <class name = "com.course.testng.multiThread.MultiThreadOnXml"/>
+        </classes>
+    </test>
+    <test name = "demo2">
+        <classes>
+            <class name = "com.course.testng.multiThread.MultiThreadOnXml"/>
+        </classes>
+    </test>
+</suite>
