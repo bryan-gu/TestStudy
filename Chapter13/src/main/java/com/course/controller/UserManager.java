@@ -63,7 +63,7 @@ public class UserManager {
                                    @RequestBody User user){
         Boolean x = verifyCookies(request);
         if(x){
-            List<User> users = template.selectOne("getUserInfo",user);
+            List<User> users = template.selectList("getUserInfo",user);
             log.info("getUserInfo获取到的用户数量为："+users.size());
             return users;
         }else {
