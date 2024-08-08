@@ -9,7 +9,7 @@ public class AddUserCase {
     private String password;
     private String sex;
     private String age;
-    private String permisson;
+    private String permission;
     private String isDelete;
     private String excepted;
 }

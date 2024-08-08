@@ -23,6 +23,7 @@ public class LoginTest {
         TestConfig.updateUserInfoUrl = ConfigFile.getUrl(InterfaceName.UPDATEUSERINFO);
 
         TestConfig.httpClient = HttpClients.createDefault();
+
     }
 
     @Test(groups = "loginTrue",description = "用户成功登录接口测试")
