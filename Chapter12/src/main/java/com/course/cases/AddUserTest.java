@@ -4,8 +4,11 @@ import com.course.config.TestConfig;
 import com.course.model.AddUserCase;
 import com.course.model.User;
 import com.course.utils.DatabaseUtil;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.util.EntityUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -51,6 +54,12 @@ public class AddUserTest {
         //设置Cookies
         TestConfig.defaultHttpClient.setCookieStore(TestConfig.store);
 
-        return null;
+        //result来存放返回结果
+        String result;
+
+        HttpResponse response = TestConfig.defaultHttpClient.execute(post);
+        result = EntityUtils.toString(response.getEntity(),"utf-8");
+        System.out.println(result);
+        return result;
     }
 }
