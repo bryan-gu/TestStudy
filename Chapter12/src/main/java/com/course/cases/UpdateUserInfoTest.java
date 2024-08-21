@@ -55,7 +55,7 @@ public class UpdateUserInfoTest {
     private int getResult(UpdateUserInfoCase updateUserInfoCase) throws IOException {
         HttpPost post = new HttpPost(TestConfig.updateUserInfoUrl);
         JSONObject param = new JSONObject();
-        param.put("id",updateUserInfoCase.getId());
+        param.put("id",updateUserInfoCase.getUserId());
         param.put("userName",updateUserInfoCase.getUserName());
         param.put("sex",updateUserInfoCase.getSex());
         param.put("age",updateUserInfoCase.getAge());

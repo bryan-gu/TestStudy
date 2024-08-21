@@ -66,5 +66,6 @@
                 isDelete = #{isDelete},
             </if>
         </trim>
+            where id = #{id};
     </update>
 </mapper>
